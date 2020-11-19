@@ -49,7 +49,7 @@ export default class MessageA extends React.Component {
     alert(
         "Sorry, medyo belated HAAHHAHAHAHAHAJAHA"
       + "\n\nHindi ko na talaga alam ano date minsan, gulat ako november na pala charot "
-      + "\n\n\nSee you next year, hopefully??"
+      + "\n\n\nSee you next year, hopefully?? (miss ko na kayo, medj anti social lang ako these days HAHA)"
     );
   };
 
@@ -118,7 +118,7 @@ export default class MessageA extends React.Component {
                   size={'large'}
                   onClick={this._handleOnClickMessageButton}
                 >
-                  {'✨ ( Click for Apology Charot ) ✨'}
+                  {'✨ ( Click for Belated Msg Charot ) ✨'}
                 </Button>
               </motion.div>
             </React.Fragment>
