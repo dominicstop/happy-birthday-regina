@@ -73,6 +73,15 @@ class GridItem extends React.Component {
     this.bgColor     = colorRollover.getColor();
   };
 
+  _handleOnClick = () => {
+    const props = this.props;
+
+    props.onClickGridItem?.({
+      bgColor    : this.bgColor,
+      imageSource: this.imageSource,
+    });
+  };
+
   render(){
     const { styles } = GridItem;
 
@@ -92,6 +101,7 @@ class GridItem extends React.Component {
           className={css(styles.image)}
           draggable={false}
           src={this.imageSource}
+          onClick={this._handleOnClick}
         />
       </motion.div>
     );
@@ -172,7 +182,7 @@ export default class ImageBanner extends React.Component {
     const { mountA, mountB } = this.state;
     if(!this.animating) return;
 
-    const DURATION = 25;
+    const DURATION = 30;
 
     if(this.isInitial){
       this.isInitial = false;
@@ -265,6 +275,11 @@ export default class ImageBanner extends React.Component {
     if(this.animating) this.startAnimation();
   };
 
+  _handleOnClickGridItem = ({bgColor, imageSource}) => {
+    const props = this.props;
+    props.onClickGridItem?.({bgColor, imageSource});
+  };
+
   render(){
     const { styles } = ImageBanner;
     const state = this.state;
@@ -297,6 +312,7 @@ export default class ImageBanner extends React.Component {
               {this.gridItems.map(index => (
                 <GridItem
                   key={`bannerA-${index}`}
+                  onClickGridItem={this._handleOnClickGridItem}
                 />
               ))}
             </motion.div>
@@ -312,6 +328,7 @@ export default class ImageBanner extends React.Component {
               {this.gridItems.map(index => (
                 <GridItem
                   key={`bannerB-${index}`}
+                  onClickGridItem={this._handleOnClickGridItem}
                 />
               ))}
             </motion.div>
