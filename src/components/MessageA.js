@@ -106,7 +106,7 @@ export default class MessageA extends React.Component {
                 transition={{duration: 0.75, delay: 0.9}}
                 onAnimationComplete={this._handleOnMessageAnimationComplete}
               >
-                {'Melody'}
+                {'Regina'}
               </motion.label>
               <motion.div
                 className={css(styles.buttonContainer)}
