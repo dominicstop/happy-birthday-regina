@@ -11,7 +11,6 @@ class ImageLinkStepper {
       ...ImageLinks.Images2014,
       ...ImageLinks.Images2015,
       ...ImageLinks.Images2016,
-      ...ImageLinks.Images2017,
     ]);
   };
 
