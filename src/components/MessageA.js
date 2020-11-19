@@ -47,9 +47,9 @@ export default class MessageA extends React.Component {
 
   _handleOnClickMessageButton = (event) => {
     alert(
-        "Congratulatins, you've just won a brand new iPhone 12"
-      + "\n\n Char lang! HAHAHHAHHAHA Miss you brad, see u after covid and stay safe 😘"
-      + "\n\n\n💖"
+        "Sorry, medyo belated HAAHHAHAHAHAHAJAHA"
+      + "\n\nHindi ko na talaga alam ano date minsan, gulat ako november na pala charot "
+      + "\n\n\nSee you next year, hopefully??"
     );
   };
 
@@ -118,7 +118,7 @@ export default class MessageA extends React.Component {
                   size={'large'}
                   onClick={this._handleOnClickMessageButton}
                 >
-                  {'✨ ( Hey There ) ✨'}
+                  {'✨ ( Click for Apology Charot ) ✨'}
                 </Button>
               </motion.div>
             </React.Fragment>
